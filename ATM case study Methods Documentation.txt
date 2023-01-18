@@ -1,0 +1,32 @@
+Bank_database:
+This class contains the account numbers, PINs, and balances of the simulated accounts. These are represented as arrays.
+
+key_pad:
+This is an abstract class that provides a template for the displayWelcome() and main_menu() methods which are
+implemented in the Screen class. It also creates an object of the Scanner class which is used to take input from the user.
+
+Screen:
+This class extends the key_pad class and implements the displayWelcome() and main_menu() methods. It also has a method
+Acc_details() which is used to take the account number and PIN from the user.
+
+Atm:
+This class extends the Bank_database class and has a method Security() which takes in the account number and PIN
+entered by the user, and compares them with the account numbers and PINs in the Bank_database class. If a match 
+is found, it returns true, otherwise false.
+
+Account: 
+This class extends the Bank_database class and has a method Balance_inquiry() which takes in the account 
+number entered by the user, and compares it with the account numbers in the Bank_database class. If a match is
+found, it returns the balance of that account.
+
+Transaction: 
+This class has a method transact() which takes in the choice entered by the user in the main_menu()
+method of the Screen class and the available balance. It then performs the corresponding action.
+
+Cash_Dispenser: 
+This class has a method Withdraw() which is used to withdraw cash from the account. It takes in the amount
+entered by the user and the available balance, and returns the new balance after the withdrawal.|
+
+Deposit_Slot:
+This class has a method of Deposit() which is used to deposit cash to the account. It adds the amount entered by
+the user to the available balance, and return the new balance after the deposit
